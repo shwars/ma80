@@ -65,6 +65,10 @@ CHATGPT_AGES = {
     "07_13_17 AM": 34,
 }
 
+KNOWN_DUPLICATE_EXPORTS = {
+    "ChatGPT Image Jul 19, 2026, 05_04_53 PM.png",
+}
+
 
 @dataclass
 class PhotoSource:
@@ -173,6 +177,29 @@ def load_sources(source_dir: Path) -> list[PhotoSource]:
     return sorted(sources, key=lambda source: source.sort_key)
 
 
+def remove_duplicate_variants(
+    sources: list[PhotoSource],
+) -> tuple[list[PhotoSource], list[str]]:
+    relatives = {source.relative for source in sources}
+    kept: list[PhotoSource] = []
+    removed: list[str] = []
+    for source in sources:
+        if source.relative in KNOWN_DUPLICATE_EXPORTS:
+            removed.append(source.relative)
+            continue
+        if source.relative.startswith("_bw/"):
+            suffix = source.path.suffix.lower().lstrip(".")
+            restored_candidates = {
+                f"{source.path.stem}.png",
+                f"{source.path.stem}__{suffix}.png",
+            }
+            if relatives.intersection(restored_candidates):
+                removed.append(source.relative)
+                continue
+        kept.append(source)
+    return kept, removed
+
+
 def flatten_to_rgb(image: Image.Image) -> Image.Image:
     image = ImageOps.exif_transpose(image)
     if image.mode in ("RGBA", "LA"):
@@ -213,7 +240,7 @@ def build(source_dir: Path, project_dir: Path) -> None:
     thumb_dir.mkdir(parents=True, exist_ok=True)
     data_dir.mkdir(parents=True, exist_ok=True)
 
-    sources = load_sources(source_dir)
+    sources, duplicate_sources = remove_duplicate_variants(load_sources(source_dir))
     existing_manifest = data_dir / "photos.json"
     existing_names: dict[str, str] = {}
     if existing_manifest.exists():
@@ -282,6 +309,13 @@ def build(source_dir: Path, project_dir: Path) -> None:
     (data_dir / "photos.js").write_text(
         "window.MA80_ALBUM = " + json_text + ";\n", encoding="utf-8"
     )
+    used_assets = {Path(item["full"]).name for item in manifest}
+    for output_dir in (full_dir, thumb_dir):
+        for asset in output_dir.glob("photo-*.webp"):
+            if asset.name not in used_assets:
+                asset.unlink()
+    if duplicate_sources:
+        print(f"Removed {len(duplicate_sources)} duplicate variants")
     print(f"Built {len(manifest)} photographs in {project_dir}")
 
 

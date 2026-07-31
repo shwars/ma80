@@ -21,7 +21,7 @@ Use Prata for the brief celebratory display line and Manrope for controls and me
 
 ## Layout
 
-The album fills `100svh`. A single contained photograph sits in a full-bleed ambient field. Navigation, counter, age, and scrubber occupy mobile safe areas and never cover the protagonist's face unnecessarily. Desktop enlarges the print but preserves the one-photo rhythm.
+The album fills the current visual viewport and updates that measurement after rotation. A single contained photograph uses the entire stage inside mobile safe areas. Navigation is invisible at the left and right edges; a compact age/counter pill floats at the bottom.
 
 ## Motion
 
@@ -30,6 +30,6 @@ Slides leave laterally with slight perspective, scale, blur, and rotation while 
 ## Components
 
 - Cover: three photographic fragments, title, short instruction, and one start button.
-- Photo stage: ambient backdrop, current image, age/year label, variant label, and position counter.
-- Navigation: generous previous/next buttons, swipe/pointer gestures, keyboard arrows, and a range-based timeline scrubber.
-- Utility: fullscreen toggle and first-visit gesture hint.
+- Photo stage: ambient backdrop and one maximally sized contained image.
+- Navigation: swipe/pointer gestures, invisible 25% edge tap zones, and keyboard arrows.
+- Utility: one close button, a fading age/counter pill, and a first-visit gesture hint.

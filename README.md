@@ -11,7 +11,7 @@ python -m pip install -r requirements-dev.txt
 python scripts/process_photos.py "D:\pictures\NEW\2026-MA80"
 ```
 
-Скрипт создаёт для каждого исходника полноразмерный WebP и небольшой preview, удаляет публичные EXIF-метаданные и записывает порядок в `data/photos.js` и `data/photos.json`.
+Скрипт предпочитает восстановленную цветную версию одинаковых архивных снимков, создаёт для каждого уникального фото полноразмерный WebP и небольшой preview, удаляет публичные EXIF-метаданные и записывает порядок в `data/photos.js` и `data/photos.json`.
 
 ## Локальный просмотр
 

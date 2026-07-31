@@ -14,7 +14,7 @@ Family and friends viewing a personal 80th-birthday album, primarily on mobile p
 
 ## Product Purpose
 
-Present every supplied photograph as a chronological life story centered on the mother in the collection. Success means the album feels personal and cinematic, loads reasonably on a phone, and can be published as a static GitHub Pages site.
+Present each unique supplied photograph as a chronological life story centered on the mother in the collection. Success means the album feels personal and cinematic, loads reasonably on a phone, and can be published as a static GitHub Pages site.
 
 ## Positioning
 
@@ -23,10 +23,10 @@ A life told one photograph at a time, with age—not file order—as the organiz
 ## Conversion & proof
 
 - Primary action: begin the album.
-- Secondary action: move directly along the age timeline.
+- Secondary action: return to the cover.
 - The remembered line: «80 лет — одна большая история».
 - Belief ladder: this is her story; every era belongs; moving through it should feel effortless.
-- Proof on hand: the 144 supplied family photographs.
+- Proof on hand: the curated set of unique family photographs.
 
 ## Brand Personality
 
@@ -42,7 +42,7 @@ Avoid a generic card gallery, scrapbook kitsch, wedding-template ornament, autop
 - Make chronology legible without pretending visual estimates are exact.
 - Use motion to express moving through time.
 - Keep every control thumb-friendly and keyboard accessible.
-- Preserve the full collection while loading only what the visitor needs.
+- Prefer the best restored version when the same photograph appears more than once.
 
 ## Accessibility & Inclusion
 

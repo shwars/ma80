@@ -1,24 +1,10 @@
 window.MA80_ALBUM = {
   "birthYear": 1946,
-  "count": 144,
-  "generatedAt": "2026-07-31T16:05:04",
+  "count": 122,
+  "generatedAt": "2026-07-31T17:04:50",
   "photos": [
     {
       "id": 1,
-      "full": "assets/photos/full/photo-001.webp",
-      "thumb": "assets/photos/thumb/photo-001.webp",
-      "width": 1920,
-      "height": 1280,
-      "age": 22,
-      "year": 1968,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/618230703.069656.jpg",
-      "color": "rgb(136 135 134)",
-      "alt": "Мама, примерно в 22 года"
-    },
-    {
-      "id": 2,
       "full": "assets/photos/full/photo-002.webp",
       "thumb": "assets/photos/thumb/photo-002.webp",
       "width": 1920,
@@ -32,21 +18,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 22 года"
     },
     {
-      "id": 3,
-      "full": "assets/photos/full/photo-003.webp",
-      "thumb": "assets/photos/thumb/photo-003.webp",
-      "width": 1280,
-      "height": 1920,
-      "age": 23,
-      "year": 1969,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/618230897.227466.jpg",
-      "color": "rgb(100 97 97)",
-      "alt": "Мама, примерно в 23 года"
-    },
-    {
-      "id": 4,
+      "id": 2,
       "full": "assets/photos/full/photo-004.webp",
       "thumb": "assets/photos/thumb/photo-004.webp",
       "width": 1280,
@@ -60,21 +32,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 23 года"
     },
     {
-      "id": 5,
-      "full": "assets/photos/full/photo-005.webp",
-      "thumb": "assets/photos/thumb/photo-005.webp",
-      "width": 960,
-      "height": 1280,
-      "age": 25,
-      "year": 1971,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/9b7f6f80-b8af-4c82-b935-36a4a766319f.jpg",
-      "color": "rgb(151 133 115)",
-      "alt": "Мама, примерно в 25 лет"
-    },
-    {
-      "id": 6,
+      "id": 3,
       "full": "assets/photos/full/photo-006.webp",
       "thumb": "assets/photos/thumb/photo-006.webp",
       "width": 960,
@@ -88,21 +46,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 25 лет"
     },
     {
-      "id": 7,
-      "full": "assets/photos/full/photo-007.webp",
-      "thumb": "assets/photos/thumb/photo-007.webp",
-      "width": 1920,
-      "height": 1310,
-      "age": 26,
-      "year": 1972,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/0069-0.jpg",
-      "color": "rgb(143 121 150)",
-      "alt": "Мама, примерно в 26 лет"
-    },
-    {
-      "id": 8,
+      "id": 4,
       "full": "assets/photos/full/photo-008.webp",
       "thumb": "assets/photos/thumb/photo-008.webp",
       "width": 1920,
@@ -116,7 +60,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 26 лет"
     },
     {
-      "id": 9,
+      "id": 5,
       "full": "assets/photos/full/photo-135.webp",
       "thumb": "assets/photos/thumb/photo-135.webp",
       "width": 1538,
@@ -130,21 +74,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 27 лет"
     },
     {
-      "id": 10,
-      "full": "assets/photos/full/photo-009.webp",
-      "thumb": "assets/photos/thumb/photo-009.webp",
-      "width": 1920,
-      "height": 1180,
-      "age": 28,
-      "year": 1974,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/619010362.232144.jpg",
-      "color": "rgb(110 109 109)",
-      "alt": "Мама, примерно в 28 лет"
-    },
-    {
-      "id": 11,
+      "id": 6,
       "full": "assets/photos/full/photo-010.webp",
       "thumb": "assets/photos/thumb/photo-010.webp",
       "width": 1920,
@@ -158,21 +88,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 28 лет"
     },
     {
-      "id": 12,
-      "full": "assets/photos/full/photo-011.webp",
-      "thumb": "assets/photos/thumb/photo-011.webp",
-      "width": 1920,
-      "height": 1280,
-      "age": 29,
-      "year": 1975,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/618239559.351086.jpg",
-      "color": "rgb(117 115 113)",
-      "alt": "Мама, примерно в 29 лет"
-    },
-    {
-      "id": 13,
+      "id": 7,
       "full": "assets/photos/full/photo-012.webp",
       "thumb": "assets/photos/thumb/photo-012.webp",
       "width": 1920,
@@ -186,21 +102,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 29 лет"
     },
     {
-      "id": 14,
-      "full": "assets/photos/full/photo-013.webp",
-      "thumb": "assets/photos/thumb/photo-013.webp",
-      "width": 1440,
-      "height": 1920,
-      "age": 30,
-      "year": 1976,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/619519598.735341.jpg",
-      "color": "rgb(124 131 103)",
-      "alt": "Мама, примерно в 30 лет"
-    },
-    {
-      "id": 15,
+      "id": 8,
       "full": "assets/photos/full/photo-014.webp",
       "thumb": "assets/photos/thumb/photo-014.webp",
       "width": 1440,
@@ -214,7 +116,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 30 лет"
     },
     {
-      "id": 16,
+      "id": 9,
       "full": "assets/photos/full/photo-143.webp",
       "thumb": "assets/photos/thumb/photo-143.webp",
       "width": 1515,
@@ -228,21 +130,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 32 года"
     },
     {
-      "id": 17,
-      "full": "assets/photos/full/photo-015.webp",
-      "thumb": "assets/photos/thumb/photo-015.webp",
-      "width": 1540,
-      "height": 1920,
-      "age": 34,
-      "year": 1980,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/619010625.438734.jpg",
-      "color": "rgb(137 134 134)",
-      "alt": "Мама, примерно в 34 года"
-    },
-    {
-      "id": 18,
+      "id": 10,
       "full": "assets/photos/full/photo-016.webp",
       "thumb": "assets/photos/thumb/photo-016.webp",
       "width": 1566,
@@ -256,7 +144,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 34 года"
     },
     {
-      "id": 19,
+      "id": 11,
       "full": "assets/photos/full/photo-137.webp",
       "thumb": "assets/photos/thumb/photo-137.webp",
       "width": 1537,
@@ -270,7 +158,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 34 года"
     },
     {
-      "id": 20,
+      "id": 12,
       "full": "assets/photos/full/photo-141.webp",
       "thumb": "assets/photos/thumb/photo-141.webp",
       "width": 1539,
@@ -284,7 +172,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 34 года"
     },
     {
-      "id": 21,
+      "id": 13,
       "full": "assets/photos/full/photo-144.webp",
       "thumb": "assets/photos/thumb/photo-144.webp",
       "width": 1518,
@@ -298,7 +186,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 34 года"
     },
     {
-      "id": 22,
+      "id": 14,
       "full": "assets/photos/full/photo-136.webp",
       "thumb": "assets/photos/thumb/photo-136.webp",
       "width": 1538,
@@ -312,21 +200,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 35 лет"
     },
     {
-      "id": 23,
-      "full": "assets/photos/full/photo-017.webp",
-      "thumb": "assets/photos/thumb/photo-017.webp",
-      "width": 643,
-      "height": 774,
-      "age": 35,
-      "year": 1981,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/dsh_mother.jpg",
-      "color": "rgb(58 58 58)",
-      "alt": "Мама, примерно в 35 лет"
-    },
-    {
-      "id": 24,
+      "id": 15,
       "full": "assets/photos/full/photo-018.webp",
       "thumb": "assets/photos/thumb/photo-018.webp",
       "width": 643,
@@ -340,21 +214,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 35 лет"
     },
     {
-      "id": 25,
-      "full": "assets/photos/full/photo-019.webp",
-      "thumb": "assets/photos/thumb/photo-019.webp",
-      "width": 1920,
-      "height": 1280,
-      "age": 36,
-      "year": 1982,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/619010665.373428.jpg",
-      "color": "rgb(125 124 123)",
-      "alt": "Мама, примерно в 36 лет"
-    },
-    {
-      "id": 26,
+      "id": 16,
       "full": "assets/photos/full/photo-020.webp",
       "thumb": "assets/photos/thumb/photo-020.webp",
       "width": 1920,
@@ -368,7 +228,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 36 лет"
     },
     {
-      "id": 27,
+      "id": 17,
       "full": "assets/photos/full/photo-138.webp",
       "thumb": "assets/photos/thumb/photo-138.webp",
       "width": 1529,
@@ -382,21 +242,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 36 лет"
     },
     {
-      "id": 28,
-      "full": "assets/photos/full/photo-021.webp",
-      "thumb": "assets/photos/thumb/photo-021.webp",
-      "width": 1552,
-      "height": 1920,
-      "age": 37,
-      "year": 1983,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/619518186.748361.jpg",
-      "color": "rgb(162 161 127)",
-      "alt": "Мама, примерно в 37 лет"
-    },
-    {
-      "id": 29,
+      "id": 18,
       "full": "assets/photos/full/photo-022.webp",
       "thumb": "assets/photos/thumb/photo-022.webp",
       "width": 1529,
@@ -410,7 +256,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 37 лет"
     },
     {
-      "id": 30,
+      "id": 19,
       "full": "assets/photos/full/photo-139.webp",
       "thumb": "assets/photos/thumb/photo-139.webp",
       "width": 1517,
@@ -424,7 +270,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 38 лет"
     },
     {
-      "id": 31,
+      "id": 20,
       "full": "assets/photos/full/photo-140.webp",
       "thumb": "assets/photos/thumb/photo-140.webp",
       "width": 1531,
@@ -438,7 +284,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 38 лет"
     },
     {
-      "id": 32,
+      "id": 21,
       "full": "assets/photos/full/photo-142.webp",
       "thumb": "assets/photos/thumb/photo-142.webp",
       "width": 1541,
@@ -452,21 +298,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 38 лет"
     },
     {
-      "id": 33,
-      "full": "assets/photos/full/photo-023.webp",
-      "thumb": "assets/photos/thumb/photo-023.webp",
-      "width": 1272,
-      "height": 1920,
-      "age": 39,
-      "year": 1985,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/IMG036-0.jpg",
-      "color": "rgb(118 118 118)",
-      "alt": "Мама, примерно в 39 лет"
-    },
-    {
-      "id": 34,
+      "id": 22,
       "full": "assets/photos/full/photo-024.webp",
       "thumb": "assets/photos/thumb/photo-024.webp",
       "width": 1272,
@@ -480,21 +312,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 39 лет"
     },
     {
-      "id": 35,
-      "full": "assets/photos/full/photo-025.webp",
-      "thumb": "assets/photos/thumb/photo-025.webp",
-      "width": 299,
-      "height": 198,
-      "age": 40,
-      "year": 1986,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/D1_IMG010-0.jpg",
-      "color": "rgb(124 124 124)",
-      "alt": "Мама, примерно в 40 лет"
-    },
-    {
-      "id": 36,
+      "id": 23,
       "full": "assets/photos/full/photo-026.webp",
       "thumb": "assets/photos/thumb/photo-026.webp",
       "width": 299,
@@ -508,21 +326,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 40 лет"
     },
     {
-      "id": 37,
-      "full": "assets/photos/full/photo-027.webp",
-      "thumb": "assets/photos/thumb/photo-027.webp",
-      "width": 1776,
-      "height": 1176,
-      "age": 41,
-      "year": 1987,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/D1_IMG017-0.jpg",
-      "color": "rgb(97 97 97)",
-      "alt": "Мама, примерно в 41 год"
-    },
-    {
-      "id": 38,
+      "id": 24,
       "full": "assets/photos/full/photo-028.webp",
       "thumb": "assets/photos/thumb/photo-028.webp",
       "width": 1776,
@@ -536,21 +340,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 41 год"
     },
     {
-      "id": 39,
-      "full": "assets/photos/full/photo-029.webp",
-      "thumb": "assets/photos/thumb/photo-029.webp",
-      "width": 1776,
-      "height": 1176,
-      "age": 41,
-      "year": 1987,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/D1_IMG018-0.jpg",
-      "color": "rgb(90 90 90)",
-      "alt": "Мама, примерно в 41 год"
-    },
-    {
-      "id": 40,
+      "id": 25,
       "full": "assets/photos/full/photo-030.webp",
       "thumb": "assets/photos/thumb/photo-030.webp",
       "width": 1776,
@@ -564,7 +354,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 41 год"
     },
     {
-      "id": 41,
+      "id": 26,
       "full": "assets/photos/full/photo-031.webp",
       "thumb": "assets/photos/thumb/photo-031.webp",
       "width": 1920,
@@ -578,35 +368,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 43 года"
     },
     {
-      "id": 42,
-      "full": "assets/photos/full/photo-133.webp",
-      "thumb": "assets/photos/thumb/photo-133.webp",
-      "width": 1541,
-      "height": 1020,
-      "age": 44,
-      "year": 1990,
-      "dateKnown": false,
-      "variant": "Восстановленная версия",
-      "source": "ChatGPT Image Jul 19, 2026, 05_04_53 PM.png",
-      "color": "rgb(77 70 57)",
-      "alt": "Мама, примерно в 44 года"
-    },
-    {
-      "id": 43,
-      "full": "assets/photos/full/photo-032.webp",
-      "thumb": "assets/photos/thumb/photo-032.webp",
-      "width": 1920,
-      "height": 1272,
-      "age": 44,
-      "year": 1990,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/IMG004-0.jpeg",
-      "color": "rgb(70 70 70)",
-      "alt": "Мама, примерно в 44 года"
-    },
-    {
-      "id": 44,
+      "id": 27,
       "full": "assets/photos/full/photo-033.webp",
       "thumb": "assets/photos/thumb/photo-033.webp",
       "width": 1920,
@@ -620,7 +382,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 44 года"
     },
     {
-      "id": 45,
+      "id": 28,
       "full": "assets/photos/full/photo-134.webp",
       "thumb": "assets/photos/thumb/photo-134.webp",
       "width": 1541,
@@ -634,21 +396,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 45 лет"
     },
     {
-      "id": 46,
-      "full": "assets/photos/full/photo-034.webp",
-      "thumb": "assets/photos/thumb/photo-034.webp",
-      "width": 1272,
-      "height": 1920,
-      "age": 46,
-      "year": 1992,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/IMG001-0.jpeg",
-      "color": "rgb(146 146 146)",
-      "alt": "Мама, примерно в 46 лет"
-    },
-    {
-      "id": 47,
+      "id": 29,
       "full": "assets/photos/full/photo-035.webp",
       "thumb": "assets/photos/thumb/photo-035.webp",
       "width": 1272,
@@ -662,35 +410,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 46 лет"
     },
     {
-      "id": 48,
-      "full": "assets/photos/full/photo-036.webp",
-      "thumb": "assets/photos/thumb/photo-036.webp",
-      "width": 1920,
-      "height": 1272,
-      "age": 50,
-      "year": 1996,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/IMG008-0.jpeg",
-      "color": "rgb(124 124 124)",
-      "alt": "Мама, примерно в 50 лет"
-    },
-    {
-      "id": 49,
-      "full": "assets/photos/full/photo-037.webp",
-      "thumb": "assets/photos/thumb/photo-037.webp",
-      "width": 1271,
-      "height": 1920,
-      "age": 50,
-      "year": 1996,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/IMG008-0.jpg",
-      "color": "rgb(132 132 132)",
-      "alt": "Мама, примерно в 50 лет"
-    },
-    {
-      "id": 50,
+      "id": 30,
       "full": "assets/photos/full/photo-038.webp",
       "thumb": "assets/photos/thumb/photo-038.webp",
       "width": 1920,
@@ -704,7 +424,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 50 лет"
     },
     {
-      "id": 51,
+      "id": 31,
       "full": "assets/photos/full/photo-039.webp",
       "thumb": "assets/photos/thumb/photo-039.webp",
       "width": 1271,
@@ -718,21 +438,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 50 лет"
     },
     {
-      "id": 52,
-      "full": "assets/photos/full/photo-040.webp",
-      "thumb": "assets/photos/thumb/photo-040.webp",
-      "width": 1920,
-      "height": 1272,
-      "age": 51,
-      "year": 1997,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/IMG021-0.jpeg",
-      "color": "rgb(130 130 130)",
-      "alt": "Мама, примерно в 51 год"
-    },
-    {
-      "id": 53,
+      "id": 32,
       "full": "assets/photos/full/photo-041.webp",
       "thumb": "assets/photos/thumb/photo-041.webp",
       "width": 1920,
@@ -746,21 +452,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 51 год"
     },
     {
-      "id": 54,
-      "full": "assets/photos/full/photo-042.webp",
-      "thumb": "assets/photos/thumb/photo-042.webp",
-      "width": 1920,
-      "height": 1272,
-      "age": 51,
-      "year": 1997,
-      "dateKnown": false,
-      "variant": "Архивный оригинал",
-      "source": "_bw/IMG023-0.jpg",
-      "color": "rgb(155 155 155)",
-      "alt": "Мама, примерно в 51 год"
-    },
-    {
-      "id": 55,
+      "id": 33,
       "full": "assets/photos/full/photo-043.webp",
       "thumb": "assets/photos/thumb/photo-043.webp",
       "width": 1920,
@@ -774,7 +466,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 51 год"
     },
     {
-      "id": 56,
+      "id": 34,
       "full": "assets/photos/full/photo-044.webp",
       "thumb": "assets/photos/thumb/photo-044.webp",
       "width": 1920,
@@ -788,7 +480,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 59 лет"
     },
     {
-      "id": 57,
+      "id": 35,
       "full": "assets/photos/full/photo-045.webp",
       "thumb": "assets/photos/thumb/photo-045.webp",
       "width": 1920,
@@ -802,7 +494,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 59 лет"
     },
     {
-      "id": 58,
+      "id": 36,
       "full": "assets/photos/full/photo-046.webp",
       "thumb": "assets/photos/thumb/photo-046.webp",
       "width": 640,
@@ -816,7 +508,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 60 лет"
     },
     {
-      "id": 59,
+      "id": 37,
       "full": "assets/photos/full/photo-047.webp",
       "thumb": "assets/photos/thumb/photo-047.webp",
       "width": 1920,
@@ -830,7 +522,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 60 лет"
     },
     {
-      "id": 60,
+      "id": 38,
       "full": "assets/photos/full/photo-048.webp",
       "thumb": "assets/photos/thumb/photo-048.webp",
       "width": 1920,
@@ -844,7 +536,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 60 лет"
     },
     {
-      "id": 61,
+      "id": 39,
       "full": "assets/photos/full/photo-049.webp",
       "thumb": "assets/photos/thumb/photo-049.webp",
       "width": 1920,
@@ -858,7 +550,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 60 лет"
     },
     {
-      "id": 62,
+      "id": 40,
       "full": "assets/photos/full/photo-050.webp",
       "thumb": "assets/photos/thumb/photo-050.webp",
       "width": 1920,
@@ -872,7 +564,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 60 лет"
     },
     {
-      "id": 63,
+      "id": 41,
       "full": "assets/photos/full/photo-051.webp",
       "thumb": "assets/photos/thumb/photo-051.webp",
       "width": 1920,
@@ -886,7 +578,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 60 лет"
     },
     {
-      "id": 64,
+      "id": 42,
       "full": "assets/photos/full/photo-052.webp",
       "thumb": "assets/photos/thumb/photo-052.webp",
       "width": 533,
@@ -900,7 +592,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 61 год"
     },
     {
-      "id": 65,
+      "id": 43,
       "full": "assets/photos/full/photo-053.webp",
       "thumb": "assets/photos/thumb/photo-053.webp",
       "width": 1440,
@@ -914,7 +606,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 61 год"
     },
     {
-      "id": 66,
+      "id": 44,
       "full": "assets/photos/full/photo-054.webp",
       "thumb": "assets/photos/thumb/photo-054.webp",
       "width": 1280,
@@ -928,7 +620,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 61 год"
     },
     {
-      "id": 67,
+      "id": 45,
       "full": "assets/photos/full/photo-055.webp",
       "thumb": "assets/photos/thumb/photo-055.webp",
       "width": 1440,
@@ -942,7 +634,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 62 года"
     },
     {
-      "id": 68,
+      "id": 46,
       "full": "assets/photos/full/photo-056.webp",
       "thumb": "assets/photos/thumb/photo-056.webp",
       "width": 1920,
@@ -956,7 +648,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 62 года"
     },
     {
-      "id": 69,
+      "id": 47,
       "full": "assets/photos/full/photo-057.webp",
       "thumb": "assets/photos/thumb/photo-057.webp",
       "width": 1920,
@@ -970,7 +662,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 62 года"
     },
     {
-      "id": 70,
+      "id": 48,
       "full": "assets/photos/full/photo-058.webp",
       "thumb": "assets/photos/thumb/photo-058.webp",
       "width": 1920,
@@ -984,7 +676,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 62 года"
     },
     {
-      "id": 71,
+      "id": 49,
       "full": "assets/photos/full/photo-059.webp",
       "thumb": "assets/photos/thumb/photo-059.webp",
       "width": 1920,
@@ -998,7 +690,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 62 года"
     },
     {
-      "id": 72,
+      "id": 50,
       "full": "assets/photos/full/photo-060.webp",
       "thumb": "assets/photos/thumb/photo-060.webp",
       "width": 1920,
@@ -1012,7 +704,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 62 года"
     },
     {
-      "id": 73,
+      "id": 51,
       "full": "assets/photos/full/photo-061.webp",
       "thumb": "assets/photos/thumb/photo-061.webp",
       "width": 1920,
@@ -1026,7 +718,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 62 года"
     },
     {
-      "id": 74,
+      "id": 52,
       "full": "assets/photos/full/photo-062.webp",
       "thumb": "assets/photos/thumb/photo-062.webp",
       "width": 1920,
@@ -1040,7 +732,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 62 года"
     },
     {
-      "id": 75,
+      "id": 53,
       "full": "assets/photos/full/photo-063.webp",
       "thumb": "assets/photos/thumb/photo-063.webp",
       "width": 1280,
@@ -1054,7 +746,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 62 года"
     },
     {
-      "id": 76,
+      "id": 54,
       "full": "assets/photos/full/photo-064.webp",
       "thumb": "assets/photos/thumb/photo-064.webp",
       "width": 1280,
@@ -1068,7 +760,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 62 года"
     },
     {
-      "id": 77,
+      "id": 55,
       "full": "assets/photos/full/photo-065.webp",
       "thumb": "assets/photos/thumb/photo-065.webp",
       "width": 1024,
@@ -1082,7 +774,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 62 года"
     },
     {
-      "id": 78,
+      "id": 56,
       "full": "assets/photos/full/photo-066.webp",
       "thumb": "assets/photos/thumb/photo-066.webp",
       "width": 1280,
@@ -1096,7 +788,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 62 года"
     },
     {
-      "id": 79,
+      "id": 57,
       "full": "assets/photos/full/photo-067.webp",
       "thumb": "assets/photos/thumb/photo-067.webp",
       "width": 1920,
@@ -1110,7 +802,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 62 года"
     },
     {
-      "id": 80,
+      "id": 58,
       "full": "assets/photos/full/photo-068.webp",
       "thumb": "assets/photos/thumb/photo-068.webp",
       "width": 1920,
@@ -1124,7 +816,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 62 года"
     },
     {
-      "id": 81,
+      "id": 59,
       "full": "assets/photos/full/photo-069.webp",
       "thumb": "assets/photos/thumb/photo-069.webp",
       "width": 1920,
@@ -1138,7 +830,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 62 года"
     },
     {
-      "id": 82,
+      "id": 60,
       "full": "assets/photos/full/photo-070.webp",
       "thumb": "assets/photos/thumb/photo-070.webp",
       "width": 1920,
@@ -1152,7 +844,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 62 года"
     },
     {
-      "id": 83,
+      "id": 61,
       "full": "assets/photos/full/photo-071.webp",
       "thumb": "assets/photos/thumb/photo-071.webp",
       "width": 1920,
@@ -1166,7 +858,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 62 года"
     },
     {
-      "id": 84,
+      "id": 62,
       "full": "assets/photos/full/photo-072.webp",
       "thumb": "assets/photos/thumb/photo-072.webp",
       "width": 922,
@@ -1180,7 +872,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 63 года"
     },
     {
-      "id": 85,
+      "id": 63,
       "full": "assets/photos/full/photo-073.webp",
       "thumb": "assets/photos/thumb/photo-073.webp",
       "width": 1920,
@@ -1194,7 +886,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 63 года"
     },
     {
-      "id": 86,
+      "id": 64,
       "full": "assets/photos/full/photo-074.webp",
       "thumb": "assets/photos/thumb/photo-074.webp",
       "width": 1920,
@@ -1208,7 +900,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 63 года"
     },
     {
-      "id": 87,
+      "id": 65,
       "full": "assets/photos/full/photo-075.webp",
       "thumb": "assets/photos/thumb/photo-075.webp",
       "width": 1920,
@@ -1222,7 +914,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 63 года"
     },
     {
-      "id": 88,
+      "id": 66,
       "full": "assets/photos/full/photo-076.webp",
       "thumb": "assets/photos/thumb/photo-076.webp",
       "width": 1920,
@@ -1236,7 +928,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 63 года"
     },
     {
-      "id": 89,
+      "id": 67,
       "full": "assets/photos/full/photo-077.webp",
       "thumb": "assets/photos/thumb/photo-077.webp",
       "width": 1920,
@@ -1250,7 +942,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 64 года"
     },
     {
-      "id": 90,
+      "id": 68,
       "full": "assets/photos/full/photo-078.webp",
       "thumb": "assets/photos/thumb/photo-078.webp",
       "width": 1920,
@@ -1264,7 +956,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 64 года"
     },
     {
-      "id": 91,
+      "id": 69,
       "full": "assets/photos/full/photo-079.webp",
       "thumb": "assets/photos/thumb/photo-079.webp",
       "width": 1920,
@@ -1278,7 +970,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 64 года"
     },
     {
-      "id": 92,
+      "id": 70,
       "full": "assets/photos/full/photo-080.webp",
       "thumb": "assets/photos/thumb/photo-080.webp",
       "width": 1920,
@@ -1292,7 +984,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 64 года"
     },
     {
-      "id": 93,
+      "id": 71,
       "full": "assets/photos/full/photo-081.webp",
       "thumb": "assets/photos/thumb/photo-081.webp",
       "width": 1920,
@@ -1306,7 +998,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 64 года"
     },
     {
-      "id": 94,
+      "id": 72,
       "full": "assets/photos/full/photo-082.webp",
       "thumb": "assets/photos/thumb/photo-082.webp",
       "width": 1920,
@@ -1320,7 +1012,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 64 года"
     },
     {
-      "id": 95,
+      "id": 73,
       "full": "assets/photos/full/photo-083.webp",
       "thumb": "assets/photos/thumb/photo-083.webp",
       "width": 1920,
@@ -1334,7 +1026,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 64 года"
     },
     {
-      "id": 96,
+      "id": 74,
       "full": "assets/photos/full/photo-084.webp",
       "thumb": "assets/photos/thumb/photo-084.webp",
       "width": 1280,
@@ -1348,7 +1040,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 64 года"
     },
     {
-      "id": 97,
+      "id": 75,
       "full": "assets/photos/full/photo-085.webp",
       "thumb": "assets/photos/thumb/photo-085.webp",
       "width": 1280,
@@ -1362,7 +1054,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 64 года"
     },
     {
-      "id": 98,
+      "id": 76,
       "full": "assets/photos/full/photo-086.webp",
       "thumb": "assets/photos/thumb/photo-086.webp",
       "width": 1920,
@@ -1376,7 +1068,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 64 года"
     },
     {
-      "id": 99,
+      "id": 77,
       "full": "assets/photos/full/photo-087.webp",
       "thumb": "assets/photos/thumb/photo-087.webp",
       "width": 1280,
@@ -1390,7 +1082,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 64 года"
     },
     {
-      "id": 100,
+      "id": 78,
       "full": "assets/photos/full/photo-088.webp",
       "thumb": "assets/photos/thumb/photo-088.webp",
       "width": 1200,
@@ -1404,7 +1096,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 65 лет"
     },
     {
-      "id": 101,
+      "id": 79,
       "full": "assets/photos/full/photo-089.webp",
       "thumb": "assets/photos/thumb/photo-089.webp",
       "width": 1920,
@@ -1418,7 +1110,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 65 лет"
     },
     {
-      "id": 102,
+      "id": 80,
       "full": "assets/photos/full/photo-090.webp",
       "thumb": "assets/photos/thumb/photo-090.webp",
       "width": 1280,
@@ -1432,7 +1124,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 65 лет"
     },
     {
-      "id": 103,
+      "id": 81,
       "full": "assets/photos/full/photo-091.webp",
       "thumb": "assets/photos/thumb/photo-091.webp",
       "width": 1280,
@@ -1446,7 +1138,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 65 лет"
     },
     {
-      "id": 104,
+      "id": 82,
       "full": "assets/photos/full/photo-092.webp",
       "thumb": "assets/photos/thumb/photo-092.webp",
       "width": 1280,
@@ -1460,7 +1152,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 65 лет"
     },
     {
-      "id": 105,
+      "id": 83,
       "full": "assets/photos/full/photo-093.webp",
       "thumb": "assets/photos/thumb/photo-093.webp",
       "width": 1920,
@@ -1474,7 +1166,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 65 лет"
     },
     {
-      "id": 106,
+      "id": 84,
       "full": "assets/photos/full/photo-094.webp",
       "thumb": "assets/photos/thumb/photo-094.webp",
       "width": 1920,
@@ -1488,7 +1180,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 65 лет"
     },
     {
-      "id": 107,
+      "id": 85,
       "full": "assets/photos/full/photo-095.webp",
       "thumb": "assets/photos/thumb/photo-095.webp",
       "width": 1280,
@@ -1502,7 +1194,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 65 лет"
     },
     {
-      "id": 108,
+      "id": 86,
       "full": "assets/photos/full/photo-096.webp",
       "thumb": "assets/photos/thumb/photo-096.webp",
       "width": 1920,
@@ -1516,7 +1208,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 65 лет"
     },
     {
-      "id": 109,
+      "id": 87,
       "full": "assets/photos/full/photo-097.webp",
       "thumb": "assets/photos/thumb/photo-097.webp",
       "width": 1280,
@@ -1530,7 +1222,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 65 лет"
     },
     {
-      "id": 110,
+      "id": 88,
       "full": "assets/photos/full/photo-098.webp",
       "thumb": "assets/photos/thumb/photo-098.webp",
       "width": 1920,
@@ -1544,7 +1236,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 66 лет"
     },
     {
-      "id": 111,
+      "id": 89,
       "full": "assets/photos/full/photo-099.webp",
       "thumb": "assets/photos/thumb/photo-099.webp",
       "width": 1920,
@@ -1558,7 +1250,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 66 лет"
     },
     {
-      "id": 112,
+      "id": 90,
       "full": "assets/photos/full/photo-100.webp",
       "thumb": "assets/photos/thumb/photo-100.webp",
       "width": 1920,
@@ -1572,7 +1264,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 67 лет"
     },
     {
-      "id": 113,
+      "id": 91,
       "full": "assets/photos/full/photo-101.webp",
       "thumb": "assets/photos/thumb/photo-101.webp",
       "width": 1081,
@@ -1586,7 +1278,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 67 лет"
     },
     {
-      "id": 114,
+      "id": 92,
       "full": "assets/photos/full/photo-102.webp",
       "thumb": "assets/photos/thumb/photo-102.webp",
       "width": 1920,
@@ -1600,7 +1292,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 67 лет"
     },
     {
-      "id": 115,
+      "id": 93,
       "full": "assets/photos/full/photo-103.webp",
       "thumb": "assets/photos/thumb/photo-103.webp",
       "width": 1280,
@@ -1614,7 +1306,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 68 лет"
     },
     {
-      "id": 116,
+      "id": 94,
       "full": "assets/photos/full/photo-104.webp",
       "thumb": "assets/photos/thumb/photo-104.webp",
       "width": 1434,
@@ -1628,7 +1320,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 68 лет"
     },
     {
-      "id": 117,
+      "id": 95,
       "full": "assets/photos/full/photo-105.webp",
       "thumb": "assets/photos/thumb/photo-105.webp",
       "width": 1920,
@@ -1642,7 +1334,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 68 лет"
     },
     {
-      "id": 118,
+      "id": 96,
       "full": "assets/photos/full/photo-106.webp",
       "thumb": "assets/photos/thumb/photo-106.webp",
       "width": 1920,
@@ -1656,7 +1348,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 68 лет"
     },
     {
-      "id": 119,
+      "id": 97,
       "full": "assets/photos/full/photo-107.webp",
       "thumb": "assets/photos/thumb/photo-107.webp",
       "width": 1920,
@@ -1670,7 +1362,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 69 лет"
     },
     {
-      "id": 120,
+      "id": 98,
       "full": "assets/photos/full/photo-108.webp",
       "thumb": "assets/photos/thumb/photo-108.webp",
       "width": 1920,
@@ -1684,7 +1376,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 69 лет"
     },
     {
-      "id": 121,
+      "id": 99,
       "full": "assets/photos/full/photo-109.webp",
       "thumb": "assets/photos/thumb/photo-109.webp",
       "width": 1216,
@@ -1698,7 +1390,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 70 лет"
     },
     {
-      "id": 122,
+      "id": 100,
       "full": "assets/photos/full/photo-110.webp",
       "thumb": "assets/photos/thumb/photo-110.webp",
       "width": 1920,
@@ -1712,7 +1404,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 70 лет"
     },
     {
-      "id": 123,
+      "id": 101,
       "full": "assets/photos/full/photo-111.webp",
       "thumb": "assets/photos/thumb/photo-111.webp",
       "width": 1920,
@@ -1726,7 +1418,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 70 лет"
     },
     {
-      "id": 124,
+      "id": 102,
       "full": "assets/photos/full/photo-112.webp",
       "thumb": "assets/photos/thumb/photo-112.webp",
       "width": 1920,
@@ -1740,7 +1432,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 70 лет"
     },
     {
-      "id": 125,
+      "id": 103,
       "full": "assets/photos/full/photo-113.webp",
       "thumb": "assets/photos/thumb/photo-113.webp",
       "width": 1920,
@@ -1754,7 +1446,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 70 лет"
     },
     {
-      "id": 126,
+      "id": 104,
       "full": "assets/photos/full/photo-114.webp",
       "thumb": "assets/photos/thumb/photo-114.webp",
       "width": 1280,
@@ -1768,7 +1460,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 70 лет"
     },
     {
-      "id": 127,
+      "id": 105,
       "full": "assets/photos/full/photo-115.webp",
       "thumb": "assets/photos/thumb/photo-115.webp",
       "width": 1920,
@@ -1782,7 +1474,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 71 год"
     },
     {
-      "id": 128,
+      "id": 106,
       "full": "assets/photos/full/photo-116.webp",
       "thumb": "assets/photos/thumb/photo-116.webp",
       "width": 1600,
@@ -1796,7 +1488,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 71 год"
     },
     {
-      "id": 129,
+      "id": 107,
       "full": "assets/photos/full/photo-117.webp",
       "thumb": "assets/photos/thumb/photo-117.webp",
       "width": 1920,
@@ -1810,7 +1502,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 71 год"
     },
     {
-      "id": 130,
+      "id": 108,
       "full": "assets/photos/full/photo-118.webp",
       "thumb": "assets/photos/thumb/photo-118.webp",
       "width": 1920,
@@ -1824,7 +1516,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 71 год"
     },
     {
-      "id": 131,
+      "id": 109,
       "full": "assets/photos/full/photo-119.webp",
       "thumb": "assets/photos/thumb/photo-119.webp",
       "width": 1920,
@@ -1838,7 +1530,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 71 год"
     },
     {
-      "id": 132,
+      "id": 110,
       "full": "assets/photos/full/photo-120.webp",
       "thumb": "assets/photos/thumb/photo-120.webp",
       "width": 1440,
@@ -1852,7 +1544,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 71 год"
     },
     {
-      "id": 133,
+      "id": 111,
       "full": "assets/photos/full/photo-121.webp",
       "thumb": "assets/photos/thumb/photo-121.webp",
       "width": 1440,
@@ -1866,7 +1558,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 72 года"
     },
     {
-      "id": 134,
+      "id": 112,
       "full": "assets/photos/full/photo-122.webp",
       "thumb": "assets/photos/thumb/photo-122.webp",
       "width": 1920,
@@ -1880,7 +1572,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 73 года"
     },
     {
-      "id": 135,
+      "id": 113,
       "full": "assets/photos/full/photo-123.webp",
       "thumb": "assets/photos/thumb/photo-123.webp",
       "width": 1920,
@@ -1894,7 +1586,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 73 года"
     },
     {
-      "id": 136,
+      "id": 114,
       "full": "assets/photos/full/photo-124.webp",
       "thumb": "assets/photos/thumb/photo-124.webp",
       "width": 1920,
@@ -1908,7 +1600,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 73 года"
     },
     {
-      "id": 137,
+      "id": 115,
       "full": "assets/photos/full/photo-125.webp",
       "thumb": "assets/photos/thumb/photo-125.webp",
       "width": 1920,
@@ -1922,7 +1614,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 73 года"
     },
     {
-      "id": 138,
+      "id": 116,
       "full": "assets/photos/full/photo-126.webp",
       "thumb": "assets/photos/thumb/photo-126.webp",
       "width": 1920,
@@ -1936,7 +1628,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 73 года"
     },
     {
-      "id": 139,
+      "id": 117,
       "full": "assets/photos/full/photo-127.webp",
       "thumb": "assets/photos/thumb/photo-127.webp",
       "width": 1440,
@@ -1950,7 +1642,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 74 года"
     },
     {
-      "id": 140,
+      "id": 118,
       "full": "assets/photos/full/photo-128.webp",
       "thumb": "assets/photos/thumb/photo-128.webp",
       "width": 1440,
@@ -1964,7 +1656,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 74 года"
     },
     {
-      "id": 141,
+      "id": 119,
       "full": "assets/photos/full/photo-129.webp",
       "thumb": "assets/photos/thumb/photo-129.webp",
       "width": 1440,
@@ -1978,7 +1670,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 74 года"
     },
     {
-      "id": 142,
+      "id": 120,
       "full": "assets/photos/full/photo-130.webp",
       "thumb": "assets/photos/thumb/photo-130.webp",
       "width": 1920,
@@ -1992,7 +1684,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 74 года"
     },
     {
-      "id": 143,
+      "id": 121,
       "full": "assets/photos/full/photo-131.webp",
       "thumb": "assets/photos/thumb/photo-131.webp",
       "width": 1440,
@@ -2006,7 +1698,7 @@ window.MA80_ALBUM = {
       "alt": "Мама, примерно в 75 лет"
     },
     {
-      "id": 144,
+      "id": 122,
       "full": "assets/photos/full/photo-132.webp",
       "thumb": "assets/photos/thumb/photo-132.webp",
       "width": 1440,
