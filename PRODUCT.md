@@ -22,8 +22,8 @@ A life told one photograph at a time, with age—not file order—as the organiz
 
 ## Conversion & proof
 
-- Primary action: begin the album.
-- Secondary action: return to the cover.
+- Primary action: move through the album.
+- Secondary action: jump to the first or final photo with the keyboard.
 - The remembered line: «80 лет — одна большая история».
 - Belief ladder: this is her story; every era belongs; moving through it should feel effortless.
 - Proof on hand: the curated set of unique family photographs.

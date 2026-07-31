@@ -9,28 +9,33 @@
 
   const photos = albumData.photos;
   const root = document.documentElement;
-  const cover = document.querySelector("#cover");
   const album = document.querySelector("#album");
+  const pile = document.querySelector("#pile");
   const deck = document.querySelector("#deck");
   const ambient = document.querySelector("#ambient");
   const status = document.querySelector("#photo-status");
   const previousButton = document.querySelector("#previous-button");
   const nextButton = document.querySelector("#next-button");
-  const startButton = document.querySelector("#start-button");
-  const closeButton = document.querySelector("#close-button");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+  const PILE_SLOTS = [
+    { x: -0.2, y: -0.32, rotation: -10, size: 0.88, opacity: 0.46 },
+    { x: 0.2, y: 0.32, rotation: 9, size: 0.86, opacity: 0.43 },
+    { x: -0.08, y: -0.39, rotation: -5, size: 0.8, opacity: 0.39 },
+    { x: 0.1, y: 0.39, rotation: 6, size: 0.82, opacity: 0.4 },
+    { x: -0.28, y: -0.24, rotation: 12, size: 0.73, opacity: 0.33 },
+    { x: 0.29, y: 0.23, rotation: -12, size: 0.75, opacity: 0.35 },
+    { x: 0.01, y: 0.02, rotation: -2, size: 0.7, opacity: 0.3 },
+  ];
+
+  let viewport = { width: window.innerWidth, height: window.innerHeight };
   let index = readIndexFromHash();
   let currentFrame = null;
+  let pilePoses = new Map();
   let animating = false;
   let pointerStart = null;
   let quietTimer = null;
   let viewportTimers = [];
-
-  const coverIndexes = [0, Math.floor(photos.length * 0.43), photos.length - 1];
-  document.querySelectorAll(".cover__print").forEach((print, position) => {
-    print.style.backgroundImage = `url("${photos[coverIndexes[position]].thumb}")`;
-  });
 
   function readIndexFromHash() {
     const match = window.location.hash.match(/^#photo-(\d+)$/);
@@ -47,12 +52,126 @@
     return "лет";
   }
 
+  function seededRandom(seed) {
+    let value = seed >>> 0;
+    return () => {
+      value = (value * 1664525 + 1013904223) >>> 0;
+      return value / 4294967296;
+    };
+  }
+
+  function fitDimensions(photo, maxWidth, maxHeight) {
+    const ratio = photo.width / photo.height;
+    let width = maxWidth;
+    let height = width / ratio;
+    if (height > maxHeight) {
+      height = maxHeight;
+      width = height * ratio;
+    }
+    return { width, height };
+  }
+
+  function pileCandidates(centerIndex) {
+    const result = [];
+    const add = (candidate) => {
+      if (
+        candidate >= 0 &&
+        candidate < photos.length &&
+        candidate !== centerIndex &&
+        !result.includes(candidate)
+      ) {
+        result.push(candidate);
+      }
+    };
+
+    [1, -1, 2, -2, 3, -3].forEach((offset) => add(centerIndex + offset));
+    const random = seededRandom((centerIndex + 1) * 7919);
+    while (result.length < PILE_SLOTS.length && result.length < photos.length - 1) {
+      add(Math.floor(random() * photos.length));
+    }
+    return result.slice(0, PILE_SLOTS.length);
+  }
+
+  function buildPileModel(centerIndex) {
+    return pileCandidates(centerIndex).map((photoIndex, slotIndex) => {
+      const photo = photos[photoIndex];
+      const slot = PILE_SLOTS[slotIndex];
+      const random = seededRandom((centerIndex + 1) * 104729 + (photoIndex + 1) * 1543);
+      const base = fitDimensions(photo, viewport.width * 0.72, viewport.height * 0.72);
+      const active = fitDimensions(
+        photo,
+        Math.max(1, viewport.width - 12),
+        Math.max(1, viewport.height - 12)
+      );
+      const width = base.width * slot.size;
+      const height = base.height * slot.size;
+      const pose = {
+        x: slot.x * viewport.width + (random() - 0.5) * viewport.width * 0.045,
+        y: slot.y * viewport.height + (random() - 0.5) * viewport.height * 0.045,
+        rotation: slot.rotation + (random() - 0.5) * 4,
+        width,
+        height,
+        scale: Math.min(width / active.width, height / active.height),
+        opacity: slot.opacity,
+      };
+      return { photoIndex, pose, slotIndex };
+    });
+  }
+
+  function renderPile(centerIndex) {
+    pilePoses = new Map();
+    const fragment = document.createDocumentFragment();
+    buildPileModel(centerIndex).forEach(({ photoIndex, pose, slotIndex }) => {
+      pilePoses.set(photoIndex, pose);
+      const card = document.createElement("figure");
+      card.className = "pile-card";
+      card.dataset.index = String(photoIndex);
+      card.style.width = `${pose.width}px`;
+      card.style.height = `${pose.height}px`;
+      card.style.zIndex = String(PILE_SLOTS.length - slotIndex);
+      card.style.setProperty("--pile-x", `${pose.x}px`);
+      card.style.setProperty("--pile-y", `${pose.y}px`);
+      card.style.setProperty("--pile-rotation", `${pose.rotation}deg`);
+      card.style.setProperty("--pile-opacity", String(pose.opacity));
+
+      const image = document.createElement("img");
+      image.src = photos[photoIndex].thumb;
+      image.alt = "";
+      image.draggable = false;
+      card.append(image);
+      fragment.append(card);
+    });
+    pile.replaceChildren(fragment);
+  }
+
+  function frameTransform(pose) {
+    return `translate3d(${pose.x}px, ${pose.y}px, -160px) rotate(${pose.rotation}deg) scale(${pose.scale})`;
+  }
+
+  function fallbackPose(photoIndex, slotIndex = 0) {
+    const model = buildPileModel(index);
+    return (
+      model.find((item) => item.photoIndex === photoIndex)?.pose ||
+      model[slotIndex % Math.max(1, model.length)]?.pose || {
+        x: 0,
+        y: 0,
+        rotation: 0,
+        scale: 0.62,
+        opacity: 0.28,
+      }
+    );
+  }
+
   function syncViewport(stabilize = false) {
-    const viewport = window.visualViewport;
-    const width = Math.round(viewport?.width || window.innerWidth);
-    const height = Math.round(viewport?.height || window.innerHeight);
-    root.style.setProperty("--app-width", `${width}px`);
-    root.style.setProperty("--app-height", `${height}px`);
+    const visual = window.visualViewport;
+    viewport = {
+      width: Math.round(visual?.width || window.innerWidth),
+      height: Math.round(visual?.height || window.innerHeight),
+    };
+    root.style.setProperty("--app-width", `${viewport.width}px`);
+    root.style.setProperty("--app-height", `${viewport.height}px`);
+    root.style.setProperty("--app-left", `${Math.round(visual?.offsetLeft || 0)}px`);
+    root.style.setProperty("--app-top", `${Math.round(visual?.offsetTop || 0)}px`);
 
     if (stabilize && currentFrame) {
       pointerStart = null;
@@ -66,6 +185,7 @@
       currentFrame.style.filter = "";
       animating = false;
     }
+    renderPile(index);
   }
 
   function settleViewport() {
@@ -117,11 +237,14 @@
   }
 
   function showInitial() {
+    syncViewport();
     currentFrame = makeFrame(photos[index]);
     currentFrame.style.opacity = "1";
     deck.replaceChildren(currentFrame);
+    renderPile(index);
     updateState();
     preloadNearby();
+    wakeChrome();
   }
 
   function goTo(nextIndex, direction = nextIndex > index ? 1 : -1) {
@@ -133,22 +256,39 @@
 
     animating = true;
     deck.classList.remove("is-dragging");
+    const oldIndex = index;
     const outgoing = currentFrame;
     const incoming = makeFrame(photos[nextIndex]);
-    const spatial = !reducedMotion.matches;
-    const duration = spatial ? 620 : 180;
-    const easing = "cubic-bezier(0.16, 1, 0.3, 1)";
+    const currentModel = buildPileModel(oldIndex);
+    const nextModel = buildPileModel(nextIndex);
+    const incomingPose =
+      pilePoses.get(nextIndex) ||
+      currentModel.find((item) => item.photoIndex === nextIndex)?.pose ||
+      fallbackPose(nextIndex, direction > 0 ? 0 : 1);
+    const outgoingPose =
+      nextModel.find((item) => item.photoIndex === oldIndex)?.pose ||
+      fallbackPose(oldIndex, direction > 0 ? 1 : 0);
+
+    pile.querySelector(`[data-index="${nextIndex}"]`)?.classList.add("is-picked");
     incoming.style.zIndex = "2";
+    outgoing.style.zIndex = "3";
     deck.append(incoming);
 
+    const spatial = !reducedMotion.matches;
+    const duration = spatial ? 720 : 180;
+    const easing = "cubic-bezier(0.16, 1, 0.3, 1)";
     const incomingFrames = spatial
       ? [
           {
-            opacity: 0,
-            transform: `translate3d(${direction * 74}vw, 0, -100px) rotate(${direction * 3}deg) scale(.95)`,
-            filter: "blur(8px)",
+            opacity: incomingPose.opacity,
+            transform: frameTransform(incomingPose),
+            filter: "brightness(.62) saturate(.68) blur(1px)",
           },
-          { opacity: 1, transform: "translate3d(0, 0, 0) rotate(0) scale(1)", filter: "blur(0)" },
+          {
+            opacity: 1,
+            transform: "translate3d(0, 0, 0) rotate(0) scale(1)",
+            filter: "brightness(1) saturate(1) blur(0)",
+          },
         ]
       : [{ opacity: 0 }, { opacity: 1 }];
     const outgoingFrames = spatial
@@ -156,18 +296,22 @@
           {
             opacity: 1,
             transform: outgoing.style.transform || "translate3d(0, 0, 0) rotate(0) scale(1)",
-            filter: "blur(0)",
+            filter: "brightness(1) saturate(1) blur(0)",
           },
           {
-            opacity: 0,
-            transform: `translate3d(${-direction * 40}vw, 0, -180px) rotate(${-direction * 4}deg) scale(.9)`,
-            filter: "blur(10px)",
+            opacity: outgoingPose.opacity,
+            transform: frameTransform(outgoingPose),
+            filter: "brightness(.62) saturate(.68) blur(1px)",
           },
         ]
       : [{ opacity: 1 }, { opacity: 0 }];
 
-    const incomingAnimation = incoming.animate(incomingFrames, { duration, easing, fill: "forwards" });
-    outgoing.animate(outgoingFrames, { duration: duration * 0.9, easing, fill: "forwards" });
+    const incomingAnimation = incoming.animate(incomingFrames, {
+      duration,
+      easing,
+      fill: "forwards",
+    });
+    outgoing.animate(outgoingFrames, { duration, easing, fill: "forwards" });
 
     index = nextIndex;
     currentFrame = incoming;
@@ -182,7 +326,9 @@
         incoming.style.opacity = "1";
         incoming.style.transform = "";
         incoming.style.filter = "";
+        incoming.style.zIndex = "";
         animating = false;
+        renderPile(index);
         preloadNearby();
       });
   }
@@ -195,7 +341,10 @@
           { transform: currentFrame.style.transform || "translate3d(0,0,0)" },
           { transform: "translate3d(0,0,0) rotate(0) scale(1)" },
         ],
-        { duration: reducedMotion.matches ? 1 : 260, easing: "cubic-bezier(0.16, 1, 0.3, 1)" }
+        {
+          duration: reducedMotion.matches ? 1 : 260,
+          easing: "cubic-bezier(0.16, 1, 0.3, 1)",
+        }
       )
       .finished.catch(() => {})
       .finally(() => {
@@ -204,45 +353,12 @@
     deck.classList.remove("is-dragging");
   }
 
-  function showAlbum() {
-    if (!album.hidden) return;
-    showInitial();
-    album.hidden = false;
-    syncViewport();
-    cover
-      .animate(
-        [{ opacity: 1, transform: "scale(1)" }, { opacity: 0, transform: "scale(1.035)" }],
-        {
-          duration: reducedMotion.matches ? 1 : 460,
-          easing: "cubic-bezier(0.16, 1, 0.3, 1)",
-          fill: "forwards",
-        }
-      )
-      .finished.catch(() => {})
-      .finally(() => {
-        cover.hidden = true;
-      });
-    wakeChrome();
-  }
-
-  function showCover() {
-    cover.hidden = false;
-    cover.getAnimations().forEach((animation) => animation.cancel());
-    cover.style.opacity = "1";
-    cover.style.transform = "";
-    album.hidden = true;
-    document.title = "Мама — 80 лет";
-    startButton.focus();
-  }
-
   function wakeChrome() {
     album.classList.remove("is-quiet");
     window.clearTimeout(quietTimer);
     quietTimer = window.setTimeout(() => album.classList.add("is-quiet"), 2400);
   }
 
-  startButton.addEventListener("click", showAlbum);
-  closeButton.addEventListener("click", showCover);
   previousButton.addEventListener("click", () => goTo(index - 1, -1));
   nextButton.addEventListener("click", () => goTo(index + 1, 1));
 
@@ -257,7 +373,9 @@
   deck.addEventListener("pointermove", (event) => {
     if (!pointerStart || animating) return;
     const dx = event.clientX - pointerStart.x;
-    const resisted = dx * ((dx > 0 && index === 0) || (dx < 0 && index === photos.length - 1) ? 0.22 : 1);
+    const resisted =
+      dx *
+      ((dx > 0 && index === 0) || (dx < 0 && index === photos.length - 1) ? 0.22 : 1);
     const rotation = Math.max(-4, Math.min(4, resisted / 80));
     currentFrame.style.transform = `translate3d(${resisted}px, 0, 0) rotate(${rotation}deg) scale(.99)`;
   });
@@ -282,15 +400,10 @@
   });
 
   document.addEventListener("keydown", (event) => {
-    if (album.hidden) {
-      if (event.key === "Enter" || event.key === " ") showAlbum();
-      return;
-    }
     if (event.key === "ArrowLeft") goTo(index - 1, -1);
     if (event.key === "ArrowRight" || event.key === " ") goTo(index + 1, 1);
     if (event.key === "Home") goTo(0, -1);
     if (event.key === "End") goTo(photos.length - 1, 1);
-    if (event.key === "Escape") showCover();
     wakeChrome();
   });
 
@@ -300,12 +413,13 @@
 
   window.addEventListener("hashchange", () => {
     const requested = readIndexFromHash();
-    if (requested !== index && !album.hidden) goTo(requested);
+    if (requested !== index) goTo(requested);
   });
   window.addEventListener("resize", settleViewport, { passive: true });
   window.addEventListener("orientationchange", settleViewport, { passive: true });
   window.visualViewport?.addEventListener("resize", settleViewport, { passive: true });
+  window.visualViewport?.addEventListener("scroll", settleViewport, { passive: true });
   window.screen.orientation?.addEventListener?.("change", settleViewport);
 
-  syncViewport();
+  showInitial();
 })();

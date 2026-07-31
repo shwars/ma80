@@ -8,40 +8,18 @@
     <title>Мама — 80 лет</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&amp;family=Prata&amp;display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <script src="data/photos.js" defer></script>
     <script src="app.js" defer></script>
   </head>
   <body>
     <main id="app">
-      <section class="cover" id="cover" aria-labelledby="cover-title">
-        <div class="cover__photos" aria-hidden="true">
-          <div class="cover__print cover__print--one"></div>
-          <div class="cover__print cover__print--two"></div>
-          <div class="cover__print cover__print--three"></div>
-        </div>
-        <div class="cover__content">
-          <p class="cover__lead">80 лет — одна большая история</p>
-          <h1 id="cover-title">Мама</h1>
-          <p class="cover__copy">Через десятилетия семейной истории.</p>
-          <button class="start-button" id="start-button" type="button">
-            Смотреть фотографии
-            <span aria-hidden="true">→</span>
-          </button>
-        </div>
-      </section>
-
-      <section class="album" id="album" aria-label="Фотоальбом" hidden>
+      <section class="album" id="album" aria-label="Фотоальбом">
         <div class="ambient" id="ambient" aria-hidden="true"></div>
+        <div class="pile" id="pile" aria-hidden="true"></div>
         <div class="deck" id="deck" aria-live="polite"></div>
 
-        <button class="close-button chrome" id="close-button" type="button" aria-label="Вернуться к обложке">
-          <span aria-hidden="true">×</span>
-        </button>
         <button class="edge-zone edge-zone--previous" id="previous-button" type="button" aria-label="Предыдущая фотография"></button>
         <button class="edge-zone edge-zone--next" id="next-button" type="button" aria-label="Следующая фотография"></button>
 

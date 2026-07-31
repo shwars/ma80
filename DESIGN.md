@@ -2,7 +2,7 @@
 
 ## Direction
 
-The physical reference is a dark photographic light table at dusk: nearly black surroundings, deep harbor-blue navigation, and small brass timeline marks. The interface should disappear around the image and feel more like handling prints than browsing a web gallery.
+The physical reference is a dark table scattered with family prints. Seven dimmed, rotated photographs form a loose pile while the current photograph is lifted above them at full clarity. The interface disappears around this composition.
 
 ## Color
 
@@ -17,19 +17,18 @@ The strategy is restrained on controls but visually drenched by the current phot
 
 ## Typography
 
-Use Prata for the brief celebratory display line and Manrope for controls and metadata, with local serif and sans-serif fallbacks. Display tracking never goes below `-0.03em`; compact copy is balanced rather than all-caps.
+Use Manrope for the small status readout and gesture hint, with local sans-serif fallbacks. Photography—not typography—carries the hierarchy.
 
 ## Layout
 
-The album fills the current visual viewport and updates that measurement after rotation. A single contained photograph uses the entire stage inside mobile safe areas. Navigation is invisible at the left and right edges; a compact age/counter pill floats at the bottom.
+The album fills the current visual viewport and updates width, height, and viewport offsets after rotation. The active photograph is strictly contained at the largest possible size. The pile recomputes around its aspect ratio and viewport orientation; invisible navigation occupies the left and right edges.
 
 ## Motion
 
-Slides leave laterally with slight perspective, scale, blur, and rotation while the next photograph arrives from the opposite side. Dragging follows the pointer before committing. Motion uses an exponential ease-out and never bounces. Reduced motion replaces spatial travel with a short crossfade.
+The selected next image rises from its existing pile pose to full size and clarity. Simultaneously, the outgoing image shrinks, rotates, dims, and settles into its exact pose in the next pile. Dragging follows the pointer before committing. Reduced motion uses a short crossfade.
 
 ## Components
 
-- Cover: three photographic fragments, title, short instruction, and one start button.
-- Photo stage: ambient backdrop and one maximally sized contained image.
+- Photo stage: ambient backdrop, seven-photo deterministic pile, and one maximally sized contained image.
 - Navigation: swipe/pointer gestures, invisible 25% edge tap zones, and keyboard arrows.
-- Utility: one close button, a fading age/counter pill, and a first-visit gesture hint.
+- Utility: a fading age/counter pill and a first-visit gesture hint.

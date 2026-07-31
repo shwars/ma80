@@ -2,12 +2,13 @@
   color-scheme: dark;
   --app-height: 100svh;
   --app-width: 100vw;
+  --app-left: 0px;
+  --app-top: 0px;
   --bg: oklch(0.08 0 0);
   --ink: oklch(0.96 0 0);
   --muted: oklch(0.76 0.012 230);
   --primary: oklch(0.45 0.086 230);
   --accent: oklch(0.78 0.12 82);
-  --font-display: "Prata", "Iowan Old Style", Baskerville, Georgia, serif;
   --font-ui: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --z-photo: 10;
@@ -48,136 +49,16 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
-.cover,
 .album {
+  position: fixed;
+  top: var(--app-top);
+  left: var(--app-left);
   width: var(--app-width);
   height: var(--app-height);
   min-height: 0;
 }
 
-.cover {
-  position: relative;
-  isolation: isolate;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  padding:
-    max(28px, env(safe-area-inset-top))
-    max(24px, env(safe-area-inset-right))
-    max(32px, env(safe-area-inset-bottom))
-    max(24px, env(safe-area-inset-left));
-  background:
-    radial-gradient(circle at 50% 40%, oklch(0.22 0.045 230 / 0.42), transparent 48%),
-    var(--bg);
-}
-
-.cover::after {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(to bottom, transparent 45%, oklch(0.08 0 0 / 0.92) 90%);
-  content: "";
-  pointer-events: none;
-}
-
-.cover__photos {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  opacity: 0.64;
-}
-
-.cover__print {
-  position: absolute;
-  width: min(78vw, 520px);
-  aspect-ratio: 4 / 3;
-  background-position: center;
-  background-size: cover;
-  filter: saturate(0.84) brightness(0.72);
-  animation: settle 1.4s var(--ease-out) both;
-}
-
-.cover__print--one {
-  top: -6%;
-  left: -34%;
-  rotate: -7deg;
-}
-
-.cover__print--two {
-  top: 12%;
-  right: -38%;
-  rotate: 8deg;
-  animation-delay: 90ms;
-}
-
-.cover__print--three {
-  bottom: -12%;
-  left: 8%;
-  rotate: -3deg;
-  animation-delay: 180ms;
-}
-
-.cover__content {
-  width: min(100%, 760px);
-  text-align: center;
-  text-shadow: 0 2px 10px oklch(0.05 0 0 / 0.72);
-}
-
-.cover__lead,
-.cover__copy {
-  margin-inline: auto;
-  color: var(--muted);
-  line-height: 1.6;
-  text-wrap: pretty;
-}
-
-.cover__lead {
-  margin-bottom: 12px;
-  color: oklch(0.9 0.04 82);
-  font-size: clamp(0.88rem, 2.8vw, 1.05rem);
-  font-weight: 600;
-}
-
-.cover h1 {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(4.5rem, 22vw, 6rem);
-  font-weight: 400;
-  letter-spacing: -0.03em;
-  line-height: 0.98;
-  text-wrap: balance;
-}
-
-.cover__copy {
-  max-width: 38ch;
-  margin-top: 24px;
-  font-size: clamp(0.98rem, 3vw, 1.12rem);
-}
-
-.start-button {
-  display: inline-flex;
-  min-height: 54px;
-  align-items: center;
-  justify-content: center;
-  margin-top: 24px;
-  padding: 0 24px;
-  gap: 18px;
-  border: 0;
-  border-radius: 999px;
-  background: var(--primary);
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 220ms var(--ease-out), background 220ms ease;
-}
-
-.start-button:hover {
-  background: oklch(0.51 0.105 230);
-  transform: translateY(-2px);
-}
-
 .album {
-  position: relative;
   isolation: isolate;
   overflow: hidden;
   background: var(--bg);
@@ -207,17 +88,52 @@ button:focus-visible {
   pointer-events: none;
 }
 
+.pile {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.pile-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  margin: 0;
+  padding: clamp(2px, 0.35vmin, 4px);
+  background: oklch(0.88 0.008 230);
+  box-shadow: 0 4px 8px oklch(0.02 0 0 / 0.46);
+  opacity: var(--pile-opacity, 0.34);
+  filter: brightness(0.72) saturate(0.78);
+  transform:
+    translate(-50%, -50%)
+    translate3d(var(--pile-x), var(--pile-y), 0)
+    rotate(var(--pile-rotation));
+  transform-origin: center;
+  transition: opacity 180ms ease;
+  will-change: transform, opacity;
+}
+
+.pile-card.is-picked {
+  opacity: 0;
+}
+
+.pile-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .deck {
   position: absolute;
   inset: 0;
   z-index: var(--z-photo);
   display: grid;
   place-items: center;
-  padding:
-    max(2px, env(safe-area-inset-top))
-    max(2px, env(safe-area-inset-right))
-    max(2px, env(safe-area-inset-bottom))
-    max(2px, env(safe-area-inset-left));
+  padding: 0;
   perspective: 1200px;
   cursor: grab;
 }
@@ -229,13 +145,9 @@ button:focus-visible {
 .photo-frame {
   position: absolute;
   inset: 0;
-  display: grid;
-  place-items: center;
-  padding:
-    max(2px, env(safe-area-inset-top))
-    max(2px, env(safe-area-inset-right))
-    max(2px, env(safe-area-inset-bottom))
-    max(2px, env(safe-area-inset-left));
+  display: block;
+  overflow: hidden;
+  padding: clamp(2px, 0.65vmin, 8px);
   will-change: transform, opacity, filter;
 }
 
@@ -243,10 +155,12 @@ button:focus-visible {
   display: block;
   width: 100%;
   height: 100%;
+  min-width: 0;
+  min-height: 0;
   object-fit: contain;
   user-select: none;
   -webkit-user-drag: none;
-  filter: drop-shadow(0 4px 7px oklch(0.02 0 0 / 0.46));
+  filter: drop-shadow(0 4px 8px oklch(0.02 0 0 / 0.62));
 }
 
 .chrome {
@@ -256,22 +170,6 @@ button:focus-visible {
 
 .album.is-quiet .chrome:not(:focus-visible) {
   opacity: 0.22;
-}
-
-.close-button {
-  position: absolute;
-  top: max(10px, env(safe-area-inset-top));
-  left: max(10px, env(safe-area-inset-left));
-  display: grid;
-  width: 46px;
-  height: 46px;
-  place-items: center;
-  border: 0;
-  border-radius: 999px;
-  background: oklch(0.08 0 0 / 0.7);
-  font-size: 1.5rem;
-  line-height: 1;
-  cursor: pointer;
 }
 
 .edge-zone {
@@ -335,44 +233,13 @@ button:focus-visible {
   animation: hint 4.2s ease both;
 }
 
-@keyframes settle {
-  from {
-    opacity: 0;
-    translate: 0 36px;
-    scale: 1.06;
-  }
-}
-
 @keyframes hint {
   0%, 12% { opacity: 0; translate: 0 8px; }
   24%, 72% { opacity: 1; translate: 0 0; }
   100% { opacity: 0; translate: 0 -6px; visibility: hidden; }
 }
 
-@media (min-width: 720px) {
-  .cover__print {
-    width: min(58vw, 520px);
-  }
-
-  .cover__print--one {
-    left: -12%;
-  }
-
-  .cover__print--two {
-    right: -17%;
-  }
-
-  .cover__print--three {
-    left: 18%;
-  }
-}
-
 @media (orientation: landscape) and (max-height: 600px) {
-  .close-button {
-    top: max(6px, env(safe-area-inset-top));
-    left: max(6px, env(safe-area-inset-left));
-  }
-
   .photo-status {
     right: max(8px, env(safe-area-inset-right));
     bottom: max(8px, env(safe-area-inset-bottom));
